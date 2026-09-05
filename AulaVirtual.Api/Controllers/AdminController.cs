@@ -32,9 +32,10 @@ namespace AulaVirtual.Api.Controllers
 
                 foreach (var inscripcion in inscripciones)
                 {
-                    var notaFinal = await _context.Entregas
-                        .Where(e => e.EstudianteId == inscripcion.EstudianteId && e.Asignacion!.CursoId == inscripcion.CursoId)
-                        .SumAsync(e => (decimal?)e.Nota) ?? 0;
+                    var notaFinal = await (from e in _context.Entregas
+                                           join a in _context.Asignaciones on e.AsignacionId equals a.Id
+                                           where e.EstudianteId == inscripcion.EstudianteId && a.CursoId == inscripcion.CursoId
+                                           select (decimal?)e.Nota).SumAsync() ?? 0;
                         
                     inscripcion.NotaFinal = notaFinal;
 

@@ -8,10 +8,10 @@ namespace AulaVirtual.App.Services
     public class ApiService
     {
         private readonly HttpClient _httpClient;
-        
-        
-        
-        private readonly string _baseUrl = "http://10.0.2.2:5291/api";
+
+
+
+        private readonly string _baseUrl = "https://aula-virtual-api-gemz.onrender.com/api";
 
         private readonly JsonSerializerOptions _jsonOptions;
 
