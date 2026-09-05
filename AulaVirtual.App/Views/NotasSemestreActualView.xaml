@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.NotasSemestreActualView"
+             Title="Notas del Semestre">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Notas del Semestre Actual" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Label Text="No hay cursos activos en este semestre." 
+               IsVisible="{Binding EstaVacio}" 
+               FontSize="16" 
+               TextColor="Gray" 
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" 
+               Margin="0,50,0,0" />
+
+        <CollectionView ItemsSource="{Binding MisNotas}" Margin="0,10,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="15" CornerRadius="8" BorderColor="LightGray">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Label Grid.Column="0" Text="{Binding NombreCurso}" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="{Binding NotaAcumulada, StringFormat='Total: {0} / 100'}" FontSize="16" FontAttributes="Bold" TextColor="#1976D2" VerticalOptions="Center" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

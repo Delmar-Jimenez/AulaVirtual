@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.DetalleCursoDocenteView"
+             Title="Detalle del Curso">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="{Binding Curso.Nombre}" FontSize="24" FontAttributes="Bold" />
+            
+            <Label Text="Crear Tarea / Recurso" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Entry Placeholder="Nombre de la tarea" Text="{Binding NuevaAsignacionTitulo}" />
+            <Editor Placeholder="Descripción" Text="{Binding NuevaAsignacionDescripcion}" HeightRequest="100" />
+            <Entry Placeholder="Punteo (Max)" Keyboard="Numeric" Text="{Binding NuevaAsignacionPuntos}" />
+            <DatePicker Date="{Binding NuevaAsignacionVencimiento}" />
+            
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Button Text="Adjuntar Archivo" Command="{Binding SeleccionarArchivoCommand}" BackgroundColor="LightGray" TextColor="Black" />
+                <Label Text="{Binding NombreArchivo}" VerticalOptions="Center" TextColor="Gray" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Label Text="Visible para estudiantes:" VerticalOptions="Center" />
+                <Switch IsToggled="{Binding NuevaAsignacionVisible}" />
+            </HorizontalStackLayout>
+            
+            <Button Text="Crear Tarea" Command="{Binding CrearAsignacionCommand}" />
+
+            <Label Text="Calificación Rápida de Exámenes" FontSize="18" FontAttributes="Bold" Margin="0,20,0,0" />
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Parcial 1" Command="{Binding CalificacionRapidaCommand}" CommandParameter="Parcial 1" BackgroundColor="DarkOrange" TextColor="White" />
+                <Button Text="Parcial 2" Command="{Binding CalificacionRapidaCommand}" CommandParameter="Parcial 2" BackgroundColor="DarkOrange" TextColor="White" />
+                <Button Text="Parcial 3" Command="{Binding CalificacionRapidaCommand}" CommandParameter="Parcial 3" BackgroundColor="DarkOrange" TextColor="White" />
+                <Button Text="Final" Command="{Binding CalificacionRapidaCommand}" CommandParameter="Examen Final" BackgroundColor="Red" TextColor="White" />
+            </HorizontalStackLayout>
+
+            <Button Text="Ver Resumen de Notas" Command="{Binding VerResumenNotasCommand}" BackgroundColor="Blue" TextColor="White" Margin="0,10,0,0" />
+
+            <Label Text="Tareas Actuales (Toca para calificar)" FontSize="18" FontAttributes="Bold" Margin="0,20,0,0" />
+            <CollectionView ItemsSource="{Binding AsignacionesLista}" SelectionMode="Single" SelectionChangedCommand="{Binding AsignacionSeleccionadaCommand}" SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Eliminar" BackgroundColor="Red" 
+                                               Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:DetalleCursoDocenteViewModel}}, Path=EliminarAsignacionCommand}" 
+                                               CommandParameter="{Binding .}" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <VerticalStackLayout Padding="10">
+                                <Label Text="{Binding Titulo}" FontSize="16" FontAttributes="Bold" />
+                                <Label Text="{Binding FechaVencimiento, StringFormat='Fecha de entrega: {0:d}'}" FontSize="14" />
+                                <Label Text="{Binding NotaDisplay}" FontSize="14" />
+                            </VerticalStackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.SemestresView"
+             Title="Gestión de Semestres">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Administración de Semestres" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Frame BorderColor="LightGray" CornerRadius="8" Padding="15">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Crear Nuevo Semestre" FontSize="18" FontAttributes="Bold" />
+                <Entry Placeholder="Nombre del semestre (ej. 2026-01)" Text="{Binding NuevoSemestreNombre}" />
+                <Button Text="Guardar" Command="{Binding GuardarSemestreCommand}" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Cargar Semestres" Command="{Binding CargarSemestresCommand}" />
+        <CollectionView ItemsSource="{Binding Semestres}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10">
+                        <Label Text="{Binding Nombre}" FontSize="18" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
+
+
+

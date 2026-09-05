@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.ResumenNotasDocenteView"
+             Title="Resumen de Notas">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Consolidado de Notas" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Button Text="Cargar Resumen" Command="{Binding CargarResumenCommand}" />
+        <CollectionView ItemsSource="{Binding ResumenEstudiantes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="15" CornerRadius="8" BorderColor="LightGray">
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <Label Text="{Binding Nombre}" FontSize="18" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding NotaAcumulada, StringFormat='Total: {0}'}" FontSize="18" FontAttributes="Bold" TextColor="Blue" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.CargarTareaView"
+             Title="Cargar Entrega">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="{Binding TareaActual.Titulo, StringFormat='Entregando: {0}'}" FontSize="20" FontAttributes="Bold" />
+        <Label Text="{Binding TareaActual.Descripcion}" FontSize="14" />
+        
+        <Label Text="Archivo Adjunto" FontSize="16" FontAttributes="Bold" Margin="0,15,0,0" />
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Seleccionar Archivo" Command="{Binding SeleccionarArchivoCommand}" />
+            <Label Text="{Binding NombreArchivo}" VerticalOptions="Center" LineBreakMode="TailTruncation" />
+        </HorizontalStackLayout>
+        
+        <Button Text="Enviar Tarea" Command="{Binding EnviarTareaCommand}" Margin="0,20,0,0" />
+    </VerticalStackLayout>
+</ContentPage>
+
+
+

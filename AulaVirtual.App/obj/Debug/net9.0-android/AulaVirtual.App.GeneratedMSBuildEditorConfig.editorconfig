@@ -1,0 +1,168 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net9.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AulaVirtual.App
+build_property.ProjectDir = C:\AulaVirtual\AulaVirtual.App\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/AulaVirtual/AulaVirtual.App/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/AsignacionesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.AsignacionesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AsignacionesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AsignacionesView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/CalificacionRapidaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.CalificacionRapidaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CalificacionRapidaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CalificacionRapidaView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/CargarTareaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.CargarTareaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CargarTareaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CargarTareaView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/CarrerasView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.CarrerasView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CarrerasView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CarrerasView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/CursosDocenteView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.CursosDocenteView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CursosDocenteView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CursosDocenteView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/CursosEstudianteView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.CursosEstudianteView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CursosEstudianteView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CursosEstudianteView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/CursosView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.CursosView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CursosView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CursosView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/DetalleCursoDocenteView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.DetalleCursoDocenteView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetalleCursoDocenteView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetalleCursoDocenteView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/DetalleCursoEstudianteView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.DetalleCursoEstudianteView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetalleCursoEstudianteView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetalleCursoEstudianteView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/EntregasTareaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.EntregasTareaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EntregasTareaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EntregasTareaView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/HistorialAcademicoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.HistorialAcademicoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HistorialAcademicoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HistorialAcademicoView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/InicioSesionView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.InicioSesionView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\InicioSesionView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\InicioSesionView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/NotasSemestreActualView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.NotasSemestreActualView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NotasSemestreActualView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NotasSemestreActualView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/PanelAdminView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.PanelAdminView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PanelAdminView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PanelAdminView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/ResumenNotasDocenteView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.ResumenNotasDocenteView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ResumenNotasDocenteView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ResumenNotasDocenteView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/ResumenNotasView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.ResumenNotasView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ResumenNotasView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ResumenNotasView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/RevisionEntregasView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.RevisionEntregasView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RevisionEntregasView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RevisionEntregasView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/SemestresView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.SemestresView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SemestresView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SemestresView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/TareasPendientesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.TareasPendientesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TareasPendientesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TareasPendientesView.xaml
+
+[C:/AulaVirtual/AulaVirtual.App/Views/UsuariosView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AulaVirtual.App.Views.UsuariosView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UsuariosView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UsuariosView.xaml

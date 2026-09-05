@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.EntregasTareaView"
+             Title="Revisión de Entregas">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="{Binding Asignacion.Titulo}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Button Text="Cargar Entregas" Command="{Binding CargarEntregasCommand}" />
+        <CollectionView ItemsSource="{Binding Entregas}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="15" CornerRadius="8" BorderColor="LightGray">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="{Binding Estudiante.NombreCompleto}" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding FechaEntrega, StringFormat='Fecha: {0:g}'}" FontSize="14" TextColor="Gray" />
+                            
+                            <Button Text="Ver Archivo Adjunto" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:EntregasTareaViewModel}}, Path=AbrirArchivoCommand}" CommandParameter="{Binding AdjuntoUrl}" BackgroundColor="LightGray" TextColor="Black" />
+
+                            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Label Text="Nota:" VerticalOptions="Center" />
+                                <Entry Text="{Binding Nota}" Keyboard="Numeric" WidthRequest="60" />
+                                <Label Text="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:EntregasTareaViewModel}}, Path=Asignacion.PunteoMaximo, StringFormat='/ {0}'}" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            
+                            <Entry Text="{Binding Retroalimentacion}" Placeholder="Retroalimentación (opcional)" />
+                            
+                            <Button Text="Calificar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:EntregasTareaViewModel}}, Path=SaveGradeCommand}" CommandParameter="{Binding .}" BackgroundColor="Green" TextColor="White" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

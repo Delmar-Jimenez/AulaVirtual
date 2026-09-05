@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.DetalleCursoEstudianteView"
+             Title="Tareas y Recursos">
+    
+    <Grid RowDefinitions="Auto, *" Padding="20">
+        <VerticalStackLayout Grid.Row="0" Spacing="15" Margin="0,0,0,15">
+            <Label Text="{Binding Curso.Nombre}" FontSize="24" FontAttributes="Bold" />
+        </VerticalStackLayout>
+
+        <CollectionView Grid.Row="1" ItemsSource="{Binding TasksAndResources}" VerticalOptions="Fill">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10">
+                        <Label Text="{Binding Titulo}" FontSize="18" FontAttributes="Bold" />
+                        <Label Text="{Binding Descripcion}" FontSize="14" />
+                        <Label Text="{Binding FechaVencimiento, StringFormat='Vence: {0:d}'}" FontSize="12" TextColor="Red" />
+                        <Label Text="{Binding NotaDisplay}" FontSize="12" FontAttributes="Bold" />
+                        <Button Text="Ir a Entrega" Margin="0,5,0,0" 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:DetalleCursoEstudianteViewModel}}, Path=IrAEntregaCommand}"
+                                CommandParameter="{Binding .}">
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button" Binding="{Binding YaEntregada}" Value="True">
+                                    <Setter Property="Text" Value="Entregada" />
+                                    <Setter Property="BackgroundColor" Value="Gray" />
+                                    <Setter Property="IsEnabled" Value="False" />
+                                </DataTrigger>
+                            </Button.Triggers>
+                        </Button>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
+
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.PanelAdminView"
+             Title="Dashboard de Administración"
+             BackgroundColor="#f1f5f9">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Frame BackgroundColor="#3b82f6" CornerRadius="15" Padding="20" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label Text="Bienvenido, Administrador" FontSize="24" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="¿Qué deseas gestionar hoy?" FontSize="16" TextColor="#eff6ff"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,*" RowSpacing="15" ColumnSpacing="15">
+                <Button Grid.Row="0" Grid.Column="0" Text="Carreras" Command="{Binding IrACarrerasCommand}" BackgroundColor="White" TextColor="#1e293b" FontAttributes="Bold" CornerRadius="10" HeightRequest="100" />
+                <Button Grid.Row="0" Grid.Column="1" Text="Semestres" Command="{Binding IrASemestresCommand}" BackgroundColor="White" TextColor="#1e293b" FontAttributes="Bold" CornerRadius="10" HeightRequest="100" />
+
+                <Button Grid.Row="1" Grid.Column="0" Text="Cursos" Command="{Binding IrACursosCommand}" BackgroundColor="White" TextColor="#1e293b" FontAttributes="Bold" CornerRadius="10" HeightRequest="100" />
+                <Button Grid.Row="1" Grid.Column="1" Text="Usuarios (Doc/Est)" Command="{Binding IrAUsuariosCommand}" BackgroundColor="White" TextColor="#1e293b" FontAttributes="Bold" CornerRadius="10" HeightRequest="100" />
+
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Asignaciones" Command="{Binding IrAAsignacionesCommand}" BackgroundColor="#10b981" TextColor="White" FontAttributes="Bold" CornerRadius="10" HeightRequest="60" />
+            </Grid>
+
+            <Button Text="Ejecutar Cierre de Semestre" 
+                    Command="{Binding CerrarSemestreCommand}" 
+                    BackgroundColor="#ef4444" 
+                    TextColor="White" 
+                    FontAttributes="Bold" 
+                    CornerRadius="10" 
+                    HeightRequest="60" 
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

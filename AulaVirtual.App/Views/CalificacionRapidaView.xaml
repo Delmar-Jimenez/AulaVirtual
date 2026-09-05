@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AulaVirtual.App.ViewModels"
+             x:Class="AulaVirtual.App.Views.CalificacionRapidaView"
+             Title="Calificación Rápida">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="{Binding Titulo, StringFormat='Evaluación: {0}'}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Button Text="Cargar Estudiantes" Command="{Binding CargarEstudiantesCommand}" />
+        <CollectionView ItemsSource="{Binding Estudiantes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="15" CornerRadius="8" BorderColor="LightGray">
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <Label Text="{Binding Nombre}" FontSize="18" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Label Text="Nota:" VerticalOptions="Center" />
+                            <Entry Text="{Binding Nota}" Keyboard="Numeric" WidthRequest="60" />
+                            <Button Text="Guardar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CalificacionRapidaViewModel}}, Path=CalificarCommand}" CommandParameter="{Binding .}" BackgroundColor="Green" TextColor="White" />
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
