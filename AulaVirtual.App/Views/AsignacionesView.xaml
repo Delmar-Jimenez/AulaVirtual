@@ -10,7 +10,25 @@
 
         <Frame BorderColor="LightGray" CornerRadius="8" Padding="15">
             <VerticalStackLayout Spacing="10">
-                <Label Text="Nueva Asignación" FontSize="18" FontAttributes="Bold" />
+                <Label Text="Asignar Docente a Curso" FontSize="18" FontAttributes="Bold" />
+                
+                <Picker Title="Seleccionar Docente" 
+                        ItemsSource="{Binding DocentesDisponibles}" 
+                        ItemDisplayBinding="{Binding NombreCompleto}"
+                        SelectedItem="{Binding DocenteSeleccionado}" />
+                        
+                <Picker Title="Seleccionar Curso" 
+                        ItemsSource="{Binding CursosDisponibles}" 
+                        ItemDisplayBinding="{Binding Nombre}"
+                        SelectedItem="{Binding CursoDocenteSeleccionado}" />
+                        
+                <Button Text="Asignar Docente" Command="{Binding AsignarDocenteCommand}" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BorderColor="LightGray" CornerRadius="8" Padding="15">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Nueva Asignación de Estudiante" FontSize="18" FontAttributes="Bold" />
                 
                 <Picker Title="Seleccionar Estudiante" 
                         ItemsSource="{Binding EstudiantesDisponibles}" 

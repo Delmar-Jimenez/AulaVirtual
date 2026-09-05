@@ -59,6 +59,39 @@ namespace AulaVirtual.App.ViewModels
             }
         }
 
+        [ObservableProperty]
+        private ObservableCollection<Usuario> docentesDisponibles = new();
+
+        [ObservableProperty]
+        private Usuario? docenteSeleccionado;
+
+        [ObservableProperty]
+        private Curso? cursoDocenteSeleccionado;
+
+        [RelayCommand]
+        private async Task AsignarDocenteAsync()
+        {
+            if (DocenteSeleccionado == null || CursoDocenteSeleccionado == null) return;
+
+            try
+            {
+                var nuevaAsignacion = new { CursoId = CursoDocenteSeleccionado.Id, ProfesorId = DocenteSeleccionado.Id };
+                var success = await _apiService.PostAsync("asignaciones/curso-profesor", nuevaAsignacion);
+                
+                if (success)
+                {
+                    DocenteSeleccionado = null;
+                    CursoDocenteSeleccionado = null;
+                    await CargarAsignacionesAsync();
+                    await Shell.Current.DisplayAlert("Éxito", "Docente asignado correctamente al curso.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
+            }
+        }
+
         [RelayCommand]
         private async Task CargarAsignacionesAsync()
         {
@@ -76,11 +109,16 @@ namespace AulaVirtual.App.ViewModels
             if (usersResult != null)
             {
                 EstudiantesDisponibles.Clear();
+                DocentesDisponibles.Clear();
                 foreach (var u in usersResult)
                 {
                     if (u.RolId == 3 || u.Rol?.Nombre == "Estudiante")
                     {
                         EstudiantesDisponibles.Add(u);
+                    }
+                    else if (u.RolId == 2 || u.Rol?.Nombre == "Docente")
+                    {
+                        DocentesDisponibles.Add(u);
                     }
                 }
             }
